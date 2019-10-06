@@ -1,70 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>BelajarDB</title>
-	<link rel="shortcut icon" href="img/lg.png">
-</head>
-<body background="img/bg.png">
-	<!-- <font face="Gotham" color="#245770"></font> -->
-	<table width="100%" align="center" >
-		<tbody>
-			<tr>
-				<td>
-					<table width="1140px" align="center" >
-						<ttbody>
-							<!--Header-->
-							<tr>
-								<td width="570px"> 
-									<a href="index.html">
-										<img src="img/logo.png" height="60px">
-									</a>
-								</td>
-								<td align="right">
-									<input type="text" placeholder="Search.." >
-									<b><a href="index.html" title="Beranda">Beranda</a></b> &nbsp;&nbsp;&nbsp;
-									<b><a href="Artikel.html" title="Artikel">Artikel</a></b> &nbsp;&nbsp;&nbsp;
-									<b><a href="Tips&Trik.html" title="Tips & Trik">Tips & Trik</a></b> &nbsp;&nbsp;&nbsp;
-									<b><a href="jenis.html"title="Jenis">Jenis</a></b> &nbsp;&nbsp;&nbsp;
-									<b><a href="profil.html"title="Profil">Profil</a></b> &nbsp;&nbsp;&nbsp;
+  <title>BelajarDB</title>
+  <link rel="shortcut icon" href="img/lg.png">
+  <meta charset="utf-8">
 
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2"></td>
-							</tr>
-							<tr>
-								<td colspan="2"><hr color=#245770 size="2px" ></td>
-							</tr>
-							
-							<tr>
-								<td colspan="2"></td>
-							</tr>
-							<!-- Content -->
-							
-							<tr>
-								<td colspan="2">
-									<b>Beranda > Profil</b>
-									<br>
-									<br>
-								</td>
-							</tr>
-							
-						</ttbody>
-						<table>
-							<tr>
-								<td>
-									<img src="img/profil.png">
-								</td>
-								<td>
-									<input type="text" placeholder="Nama Kamu adalah.." ><br><br>
-									<b><a href="b.html" title="history">History Bacaan</a></b><br><br>
-									<b><a href="b.html" title="Ebook">E-book Tersimpan</a></b><br><br>
-									<button>Logout</button>
-								</td>
-							</tr>
-						</table>
-						
-					</tbody>
-				</table>
-			</body>
-			</html>
+  <link href="style.css" rel="stylesheet">
+  
+</head>
+<body>
+
+
+  <div class="bg">
+    <ul>
+      <li><a class="active" href="profil.html">Profil</a></li>
+      <div class="dropdown">
+        <button class="dropbtn">Jenis
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-content">
+         <a href="#">Kursus</a>
+         <a href="#">Video Pembelajaran</a>
+         <a href="#">Materi Pembelajaran</a>
+       </div>
+     </div>
+     <li><a href="#news">Tips & Trik</a></li>
+     <li><a href="#contact">Artikel</a></li>
+     <li><a href="index.html">Beranda</a></li>
+     <input type="text" placeholder="Search..">
+     <div class="logo">
+      <a href="index.html">
+        <img src="img/logo.png" width="17%">
+      </a>
+
+    </div>
+
+  </ul>
+  <hr color=#245770 size="2px" >
+  <div class="step">
+    <li><a href="profil.html"><b>Profil</b></a></li>
+    <li><a href="index.html"><b>Beranda</b></a></li>
+
+  </div>
+</div>
+<table>
+  <tr>
+    <th colspan="3">
+      <a href="editprofil.html">
+        <img src="img/profil.png" height="300px" width="300px"></a>
+        <br>
+      </th>
+      <th rowspan="3">
+
+        <input type="text" placeholder="Nama Kamu adalah.." ><br><br>
+        <input type="text" placeholder="TTL ...."><br><br>
+        <input type="text" placeholder="Alamat ...."><br><br>
+        <input type="text" placeholder="Email ....."><br><br>
+        <input type="text" placeholder="Username ...."><br><br>
+        <input type="password" placeholder="Password"><br><br>
+
+      </th>
+    </tr>
+    <tr>
+      <th rowspan ="2">
+        <button class="logout">
+          <a href="index.html">Logout</button></a>
+        </th>
+        <td>
+          <li><b><a href="b.html" title="history">History Bacaan</a></b><br><br></li>
+        </td>
+        <td>
+          <li><b><a href="b.html" title="Ebook">E-book Tersimpan</a></b><br><br></li>
+        </td>
+
+
+      </tr>
+    </table>
+  </body>
+  </html>
