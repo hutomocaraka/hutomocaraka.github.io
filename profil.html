@@ -13,7 +13,14 @@
 
   <div class="bg">
     <ul>
-      <li><a class="active" href="profil.html">Profil</a></li>
+      <div class="dropdown">
+        <button class="dropbtn">Profil
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="login.html">Profil Saya</a>
+        </div>
+      </div>
       <div class="dropdown">
         <button class="dropbtn">Jenis
          <i class="fa fa-caret-down"></i>
@@ -27,7 +34,7 @@
      <li><a href="#news">Tips & Trik</a></li>
      <li><a href="#contact">Artikel</a></li>
      <li><a href="index.html">Beranda</a></li>
-     <input type="text" placeholder="Search..">
+     <input type="text" class="search" placeholder="Search..">
      <div class="logo">
       <a href="index.html">
         <img src="img/logo.png" width="17%">
@@ -38,12 +45,14 @@
   </ul>
   <hr color=#245770 size="2px" >
   <div class="step">
-    <li><a href="profil.html"><b>Profil</b></a></li>
-    <li><a href="index.html"><b>Beranda</b></a></li>
+    <a href="index.html">Beranda ></a>
+    <a >Profil ></a>
+    <a href="profil.html">Profil Saya</a>
 
   </div>
 </div>
-<table>
+<div class="edit">
+  <table>
   <tr>
     <th colspan="3">
       <a href="editprofil.html">
@@ -76,5 +85,6 @@
 
       </tr>
     </table>
+</div>
   </body>
   </html>
