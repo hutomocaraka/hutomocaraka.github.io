@@ -1,59 +1,64 @@
-body {
-  background-image: url("img/bg.png");
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Gotham;
+  background-image: url(img/bg.png);
   background-size: 1366px 650px;
   background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
-ul {
-  list-style-type: none;
-  margin-top: 75px;
-  overflow: hidden;
-  top: 0;
-
+hr {
+  height: 1px;
+  width: 100%;
+  color: #245770 ;
 }
 
-li {
+.header{
+  height: 50px;
+  padding: 14px 16px;
+  width: auto;
+  margin: 50px 20px 20px 20px;
+}
+
+.logo img{
+  float: left;
+  width: 18%;
+  margin-bottom: -30px;
+}
+
+.menu{
+  float: right;
+  line-height: 50px;
+}
+
+.menu a{
+  color: #245770;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.show-menu-btn,.hide-menu-btn{
+  transition: 0.4s;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn{
   float: right;
 }
-
-li a {
-  display: block;
-  color: #245770;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: Gotham;
+.show-menu-btn i{
+  line-height: 100px;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+  color: #3498db;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  /*background-image: url(img/hover.png);
-  background-size: 100px;
-  background-repeat: no-repeat;*/
-  color: #5A92AF;
-
-}
-
-.container p a {
-  color: #245770;
-  text-decoration: none;
-  font-family: Gotham;
-}
-
-.container p a :hover{
-  color: #5A92AF;
-}
-
-.bg {
-  width: 1250px;
-  margin: 0 auto;
-}
-
-h1{
-  font-family: Gotham;
-  color: #245770;
-  font-size: 50px;
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
 }
 
 .dropdown {
@@ -72,7 +77,7 @@ h1{
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
-  background-image: url(img/dd.png);
+  
   background-size: 10px;
   background-repeat: no-repeat;
   background-position: right;
@@ -116,110 +121,43 @@ h1{
   display: block;
 }
 
-input.search{
-  float: right;
-  padding: 6px;
-  border-color: #245770;
-  border-radius: 20px;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-  font-family: Gotham;
-  background-image: url(img/sc.png);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: right ;
+
+.konten{
+  padding: 14px 16px;
+  width: auto;
+  margin: 20px 20px 20px 20px;
+  margin-top: -20px;
 }
 
-.edit input[type=text], .edit input[type=password] {
-  float: right;
-  padding: 6px;
-  /*border-color: #111;*/
-  border-radius: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-  font-family: Gotham;
+.konten h1{
+  color: #245770;
+  font-size: 40px;
 }
 
-.edit img{
-  margin-top: 20px;
+.konten img{
+  width: 20%;
 }
 
-.logo {
-  margin-left: -40px;
+.gambar img{
+  width: 100%;
 }
 
-.artike1 {
-  margin-left: -0px;
-  margin-right: 20px;
-  font-size: 20px;
-  font-family: gotham;
-  text-align: justify;
+.th img{
+  width: 150px;
 }
 
-.step{
-  font-size: 15px;
-  font-family: Gotham;
-}
-
-.step a{
+.container p a {
   color: #245770;
   text-decoration: none;
   font-family: Gotham;
 }
 
-.logout{
-  background:#008717;
-  color:white;
-  border-radius: 6px;
-  border-bottom:5px solid #035c12;
-  padding:10px 20px;
-  text-decoration:none;
-  font-family:sans-serif;
-  font-size:11pt;
-}
-
 .container {
-  
   padding: 25px;
   width: 30%;
   margin: 0 auto;
   font-family: Gotham;
   border-radius: 10px;
-  
-}
-
-input.form-control  {
-  border-radius: 20px;
-  padding: 5px;
-  color: #245770;
-  border: 3px solid #245770;
-  margin: 0 auto;
-  height: 20px;
-  width: 100%;
-  font-family: Gotham;
-
-}
-
-.container h1 {
-  font-family: Gotham;
-  margin-top: 3px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 50px;
-}
-
-input.login{
-  width:100%;
-  height:50px;
-  border:none;
-  background-color:transparent;
-  background-image:url(img/btnlgn.png);
-  background-position:center center;
-  background-size: 70px;
-  cursor:pointer;
-  background-repeat: no-repeat;
 }
 
 input.register{
@@ -234,14 +172,23 @@ input.register{
   margin-bottom: 20px;
 }
 
-input.btnreg{
-  width:100px;
+.container h1 {
+  font-family: Gotham;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 50px;
+  color: #245770;
+}
+
+input.login{
+  width:100%;
   height:50px;
   border:none;
   background-color:transparent;
-  background-image:url(img/btnreg.png);
+  background-image:url(img/btnlgn.png);
   background-position:center center;
-  background-size: 100px;
+  background-size: 70px;
   cursor:pointer;
   background-repeat: no-repeat;
 }
@@ -255,4 +202,98 @@ input.btnreg{
   width: 50%;
   color: #245770 ;
   margin-bottom: 20px;
+}
+
+input.btnreg{
+  width:100%;
+  height:50px;
+  border:none;
+  background-color:transparent;
+  background-image:url(img/btnreg.png);
+  background-position:center center;
+  background-size: 100px;
+  cursor:pointer;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width:800px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+
+  .logo img{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    right: -100%;
+    top: 0;
+    text-align: right;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+  }
+
+  .konten img{
+    width: 80%;
+  }
+
+  .gambar img{
+    width: 100%;
+  }
+
+  .container h1 {
+  margin-top: 3px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 50px;
+  color: #245770;
+}
+
+  input.register{
+  border-radius: 20px;
+  padding: 5px;
+  color: #245770;
+  border: 3px solid #245770;
+  margin: 0 auto;
+  height: 25px;
+  width: 150%;
+  font-family: Gotham;
+  margin-bottom: 20px;
+  align-content: center;
+  margin-left: -40px;
+}
+
+
+}
+
+input.search{
+  padding: 6px;
+  border-color: #245770;
+  border-radius: 20px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  font-family: Gotham;
+  background-image: url(img/sc.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right ;
 }
