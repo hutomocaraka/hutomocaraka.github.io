@@ -1,43 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>BelajarDB</title>
-  <link rel="shortcut icon" href="img/lg.png">
   <meta charset="utf-8">
-
-  <link href="style.css" rel="stylesheet">
-  
+    <title>belajarDB</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 </head>
 <body>
+  <div class="header">
+    <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png">
+        </a>
+      </div>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="fas fa-ellipsis-h"></i>
+    </label>
 
-
-	<div class="bg">
-		<ul>
-      <li><a class="active" href="profil.html">Profil</a></li>
+    <ul class="menu">
+      <input type="text" class="search" placeholder="Search..">
+      <a href="index.html">Beranda</a>
+      <a href="berita.html">Berita</a>
       <div class="dropdown">
-        <button class="dropbtn">Jenis
-         <i class="fa fa-caret-down"></i>
-       </button>
-       <div class="dropdown-content">
-         <a href="#">Kursus</a>
-         <a href="#">Video Pembelajaran</a>
-         <a href="#">Materi Pembelajaran</a>
-       </div>
-     </div>
-     <li><a href="#news">Tips & Trik</a></li>
-     <li><a href="#contact">Artikel</a></li>
-     <li><a href="index.html">Beranda</a></li>
-     <input type="text" placeholder="Search..">
-     <div class="logo">
-      <a href="index.html">
-        <img src="img/logo.png" width="17%">
-      </a>
-
-    </div>
-
-  </ul>
-  <hr color=#245770 size="2px" >
-  <div class="artikel1">
+        <button class="dropbtn">Profil
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="login.html">Login</a>
+        </div>
+      </div>
+      <label for="chk" class="hide-menu-btn">
+        <i class="fas fa-times"></i>
+      </label>
+    </ul>
+    <hr color=#245770 size="2px" >
+  </div>
+ 
+  <div class="konten">
     <table>
       <tr>
         <h1>Cara Menentukan Primary Key di Dalam Database </h1>

@@ -135,7 +135,16 @@ hr {
 }
 
 .konten img{
-  width: 20%;
+  width: 30%;
+}
+
+.artikel {
+  width: 70%;
+  height: 100%;
+} 
+
+.artikel img{
+  width: 100%;
 }
 
 .gambar img{
@@ -195,6 +204,7 @@ input.login{
 
 .container p{
   text-align: center;
+  
 }
 
 .container hr{
@@ -215,6 +225,42 @@ input.btnreg{
   cursor:pointer;
   background-repeat: no-repeat;
 }
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 30%; /* Set the width of the sidebar */
+  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+  overflow: auto;
+  z-index: 1; /* Stay on top */
+  top: 10; /* Stay at the top */
+  right: 0;
+  /*background-color: #111; /* Black */*/
+  /*overflow-x: hidden;  Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  /*display: block;*/
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: grey;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+
 
 @media screen and (max-width:800px) {
   .show-menu-btn,.hide-menu-btn{
@@ -260,12 +306,13 @@ input.btnreg{
   }
 
   .container h1 {
-  margin-top: 3px;
+  margin-top: 10px;
   margin-bottom: 20px;
   text-align: center;
   font-size: 50px;
   color: #245770;
 }
+
 
   input.register{
   border-radius: 20px;
@@ -281,6 +328,15 @@ input.btnreg{
   margin-left: -40px;
 }
 
+.konten p{
+  text-align: justify;
+}
+.sidenav {
+  padding-top: 15px;
+}
+.sidenav a {
+  font-size: 18px;
+}
 
 }
 
@@ -296,4 +352,12 @@ input.search{
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: right ;
+}
+
+
+
+.step{
+  font-size: 15px;
+  font-family: Gotham;
+  float: left;
 }
