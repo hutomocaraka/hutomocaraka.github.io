@@ -2,18 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
-    <title>belajarDB</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <title>belajarDB</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 </head>
 <body>
   <div class="header">
     <div class="logo">
-        <a href="index.html">
-          <img src="img/logo.png">
-        </a>
-      </div>
+      <a href="index.html">
+        <img src="img/logo.png">
+      </a>
+    </div>
     <input type="checkbox" id="chk">
     <label for="chk" class="show-menu-btn">
       <i class="fas fa-ellipsis-h"></i>
@@ -23,7 +23,17 @@
       <input type="text" class="search" placeholder="Search..">
       <a href="index.html">Beranda</a>
       <a href="berita.html">Berita</a>
-        <div class="dropdown">
+      <a href="#news">Tips & Trik</a>
+      <div class="dropdown">
+        <button class="dropbtn">Profil
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-content">
+         <a href="#">Profil Saya</a>
+         <a href="#">Logout</a>
+       </div>
+     </div>
+      <div class="dropdown">
         <button class="dropbtn">Jenis
          <i class="fa fa-caret-down"></i>
        </button>
@@ -33,52 +43,72 @@
          <a href="#">Materi Pembelajaran</a>
        </div>
      </div>
-     <a href="#news">Tips & Trik</a>
-     <a href="profil.html">Profil</a>
-    </ul>
-    <hr color=#245770 size="2px" >
-  </div>
-  <div class="step">
-    <a href="index.html">Beranda ></a>
-    <a >Profil ></a>
-    <a href="profil.html">Profil Saya</a>
+     
+     <label for="chk" class="hide-menu-btn">
+        <i class="fas fa-times"></i>
+      </label>
+   </ul>
+   <hr color=#245770 size="2px" >
+ </div>
+ <div class="step">
+  <a href="index.html">Beranda ></a>
+  <a >Profil ></a>
+  <a href="profil.html">Profil Saya</a>
 
-  </div>
+</div>
 </div>
 <div class="edit">
-  <table>
-  <tr>
-    <th colspan="3">
-      <a href="editprofil.html">
-        <img src="img/profil.png" height="300px" width="300px"></a>
-        <br>
-      </th>
-      <th rowspan="3">
-
-        <input type="text" placeholder="Nama Kamu adalah.." ><br><br>
-        <input type="text" placeholder="TTL ...."><br><br>
-        <input type="text" placeholder="Alamat ...."><br><br>
-        <input type="text" placeholder="Email ....."><br><br>
-        <input type="text" placeholder="Username ...."><br><br>
-        <input type="password" placeholder="Password"><br><br>
-
-      </th>
-    </tr>
+  <div class="pp">
+    <a href="editprofil.html">
+      <img src="img/profil.png"></a>
+    </div>
+    <div class="formedit">
+      <input type="text" class="edit" placeholder="Nama Kamu adalah.." ><br><br>
+      <input type="text" class="edit" placeholder="TTL ...."><br><br>
+      <input type="text" class="edit" placeholder="Alamat ...."><br><br>
+      <input type="text" class="edit" placeholder="Email ....."><br><br>
+      <input type="text" class="edit" placeholder="Username ...."><br><br>
+      <input type="password" class="edit" placeholder="Password"><br><br>
+    </div>
+    <div class="ebook">
+      <a href="#">History Bacaan</a>
+      <br>
+      <br>
+      <a href="#">E-Book yang Tersimpan</a>
+    </div>
+  <!-- <table>
     <tr>
-      <th rowspan ="2">
-        <button class="logout">
-          <a href="index.html">Logout</button></a>
+      <th colspan="3">
+        <a href="editprofil.html">
+          <img src="img/profil.png" height="300px" width="300px"></a>
+          <br>
         </th>
-        <td>
-          <li><b><a href="b.html" title="history">History Bacaan</a></b><br><br></li>
-        </td>
-        <td>
-          <li><b><a href="b.html" title="Ebook">E-book Tersimpan</a></b><br><br></li>
-        </td>
+        <th rowspan="3">
 
+          <input type="text" class="edit" placeholder="Nama Kamu adalah.." ><br><br>
+          <input type="text" class="edit" placeholder="TTL ...."><br><br>
+          <input type="text" class="edit" placeholder="Alamat ...."><br><br>
+          <input type="text" class="edit" placeholder="Email ....."><br><br>
+          <input type="text" class="edit" placeholder="Username ...."><br><br>
+          <input type="password" class="edit" placeholder="Password"><br><br>
 
+        </th>
       </tr>
-    </table>
-</div>
+      <tr>
+        <th rowspan ="2">
+          <button class="logout">
+            <a href="index.html">Logout</button></a>
+          </th>
+          <td>
+            <li><b><a href="b.html" title="history">History Bacaan</a></b><br><br></li>
+          </td>
+          <td>
+            <li><b><a href="b.html" title="Ebook">E-book Tersimpan</a></b><br><br></li>
+          </td>
+
+
+        </tr>
+      </table> -->
+    </div>
   </body>
   </html>
