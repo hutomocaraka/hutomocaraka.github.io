@@ -239,9 +239,9 @@ input.btnreg{
 
 /* The sidebar menu */
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
+  height: 100%; 
   width: 30%; /* Set the width of the sidebar */
-  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+  position: absolute; 
   overflow: auto;
   z-index: 1; /* Stay on top */
   top: 10; /* Stay at the top */
@@ -255,8 +255,9 @@ input.btnreg{
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: black;
+  text-align: justify;
   /*display: block;*/
 }
 
@@ -334,7 +335,7 @@ input.btnreg{
   }
 
   .konten img{
-    width: 80%;
+    width: 150%;
   }
 
   .gambar img{
