@@ -150,6 +150,11 @@ hr {
   width: 100%;
 }
 
+.materi tr th a{
+  text-decoration: none;
+  color: #245770;
+}
+
 .th img{
   width: 150px;
 }
@@ -243,9 +248,8 @@ input.btnreg{
   width: 30%; /* Set the width of the sidebar */
   position: absolute; 
   overflow: auto;
-  z-index: 1; /* Stay on top */
   top: 10; /* Stay at the top */
-  right: 0;
+  right: 35px;
   /*background-color: #111; /* Black */*/
   /*overflow-x: hidden;  Disable horizontal scroll */
   padding-top: 20px;
@@ -264,6 +268,18 @@ input.btnreg{
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: grey;
+}
+
+.sidenav1{
+  float: left;
+  padding: 14px 16px;
+  width: auto;
+  margin: -30px 20px 20px 20px;
+}
+
+.sidenav1 a{
+  text-decoration: none;
+  color: #245770;
 }
 
 /* Style page content */
@@ -297,10 +313,20 @@ input.btnreg{
   width: auto;
   margin: -40px 20px 20px 20px;
   color: #245770;
+  float: left;
 }
 
+.kontenbr{
+  float: left;
+}
 
-@media screen and (max-width:800px) {
+.materi{
+  padding: 14px 16px;
+  width: auto;
+  margin: 0px 20px 20px 20px;
+}
+
+@media screen and (max-width:720px) {
   .show-menu-btn,.hide-menu-btn{
     display: block;
   }
@@ -335,7 +361,7 @@ input.btnreg{
   }
 
   .konten img{
-    width: 150%;
+    width: 100%;
   }
 
   .gambar img{
@@ -345,6 +371,18 @@ input.btnreg{
   .gambar tr th{
     width: 100%;
     display: block;
+  }
+
+.materi tr th{
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .artikel tr th{
+    width: 100%;
+    display: block;
+    margin-left: 70px;
   }
 
   .container h1 {
@@ -375,6 +413,9 @@ input.btnreg{
   }
   .sidenav {
     padding-top: 15px;
+    width: 80%;
+    position: static;
+    margin:20px 0px 20px 35px;
   }
   .sidenav a {
     font-size: 18px;
@@ -395,7 +436,7 @@ input.btnreg{
   }
 
   iframe{
-    width: 100%;
+    width: 140%;
   }
 
 }
