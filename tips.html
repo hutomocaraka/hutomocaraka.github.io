@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>belajarDB</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="indexsetelahlogin.html">
+        <img src="img/logo.png">
+      </a>
+    </div>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+         <ul class="menu">
+      <input type="text" class="search" placeholder="Search..">
+      <a href="indexsetelahlogin.html">Beranda</a>
+      <a href="beritasetelahlogin.html">Berita</a>
+      <a href="tips.html">Tips & Trik</a>
+      <div class="dropdown">
+        <button class="dropbtn">Profil
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-content">
+         <a href="profil.html">Profil Saya</a>
+         <a href="index.html">Logout</a>
+       </div>
+     </div>
+      <div class="dropdown">
+        <button class="dropbtn">Jenis
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-content">
+         <a href="#">Kursus</a>
+         <a href="video.html">Video Pembelajaran</a>
+         <a href="#">Materi Pembelajaran</a>
+       </div>
+     </div>
+     
+     <label for="chk" class="hide-menu-btn">
+        <i class="fas fa-times"></i>
+      </label>
+   </ul>
+   <hr color=#245770 size="2px" >
+ </div>
+
+  <div class="konten">
+   
+      <h1>TIPS DAN TRIK MENGEMBANGKAN DATABASE MYSQL</h1>
+      by Marcel Christian | Apr 19, 2017 | 
+
+      <p>Halo teman-teman pada kesempatan kali ini saya akan menjelaskan 5 tips & trik untuk mengembangkan database MySQL.</p>
+
+      <p>Sejak diperkenalkan pada tahun 1995, MySQL dengan cepat menjadi sistem manajemen basis data terpopuler di dunia. Dengan jenis popularitas itu muncul tanggung jawab yang besar dan banyak perbaikan, pembaruan, dan trik yang cukup aneh. Jadi mana yang paling bermanfaat? Di bawah ini teman-teman akan menemukan 5 tips & trik mengembangkan database MySQL untuk para ahli maupun pemula.</p>
+
+      <h2>Jangan mengubah (mengedit) Dump File</h2>
+      <p>Jika teman-teman pernah melihat file dump yang dibuat oleh mysqldump, mereka terlihat sangat mirip file teks biasa dan tidak berbahaya. Tapi bagi siapa saja yang pernah mencoba menyuntingnya, mereka dengan cepat mengetahui bahwa itu hanyalah file teks. Kebanyakan orang mengeditnya dalam editor teks stteman-temanr, dan kemudian korupsi mulai muncul. Satu-satunya cara yang dijamin untuk menghindari masalah adalah membiarkan file dump saja.</p>
+
+      <h2>MyISAM Block Size</h2>
+      <p>Salah satu rahasia yang tersimpan lebih baik adalah pengaturan untuk ukuran blok di indeks tabel MyISAM. Pengaturannya, myisam_block_size dapat ditemukan di file .MYI di buffer kunci, serta disk. Ini memiliki nilai default 1k, yang cukup kecil untuk optimal pada sistem modern. Sebagian besar sistem file akan menggunakan blok ukuran yang lebih besar. Dan kita tahu bahwa menulis satu blok indeks akan membutuhkan pembacaan dan kemudian menulis. Sistem operasi tidak akan pernah harus menulis ke disk yang mendasarinya, asalkan ukuran blok sama dengan, atau lebih besar dari ukuran blok file.</p>
+
+      <h2>Aktifkan delay_key_write</h2>
+      <p>Secara default delay_key_write dimatikan. Alasan untuk ini adalah karena jika Teman-teman mengalami kecelakaan mi-project, Teman-teman bisa berakhir dengan database yang rusak. Jadi mengapa Teman-teman ingin menyalakannya? Sederhana. Karena mengubah delay_key_write pada memastikan bahwa database tidak akan menyiram file kunci MyISAM setelah setiap menulis. Jadi, jika Teman-teman menulis lagi dalam waktu dekat, Teman-teman akan diselamatkan cukup banyak waktu. Menghidupkan delay_key_write adalah versi yang spesifik. Untuk melihat perbedaan dalam menyalakannya untuk versi Teman-teman gunakan manual situs resmi MySQL.</p>
+
+      <h2>Buat kolom yang sama namun jangan lupakan index</h2>
+      <p>MySQL perlu mengetahui cara mengoptimalkan operasi JOIN. Jadi, jika Teman-teman memiliki aplikasi dengan banyak JOIN queries, kolom yang harus diindeks pada kedua tabel Teman-teman. Pastikan kolom yang Teman-teman gabung adalah tipe yang sama, termasuk pengkodean karakter untuk kolom string. Jika tidak, MySQL akan mencoba melakukan full table scan. Jadi kapan pun Teman-teman perlu menarik informasi dari tabel Teman-teman, cukup ubah kueri untuk hanya mengambil info pengguna dari kolom tertentu.</p>
+
+      <h2>Gunakan LIMIT 1 pada WHERE</h2>
+      <p>Jadi Teman-teman mencari satu baris, tapi Teman-teman sedang menanyai tabel Teman-teman. Mengapa tidak mengoptimalkan kinerja Teman-teman dengan menambahkan LIMIT 1 dan mengembalikan query-query yang sebenarnya? Dengan cara ini, alih-alih melewati seluruh tabel atau indeks itu akan berhenti memindai setelah hanya menemukan satu. Contoh yang digunakan terus-menerus di web dapat ditemukan di Twiwoo, namun ini adalah perintah yang cukup sederhana dan langsung dalam hal apapun.</p>
+
+  </div>
+
+
+</body>
+</html>
