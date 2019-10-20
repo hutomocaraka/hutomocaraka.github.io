@@ -59,19 +59,20 @@
 
     console.log(email);
 
-    if(email =="" && password ==""){
-      alert ("Data tidak boleh kosong") ;
-      return false;
-    }
-    else if(email !="" && password !=""){
-       window.location.href = "indexsetelahlogin.html";
-
-    }
-    else{
-      alert ("Data tidak boleh kosong") ;
-      return false;
-    }
+    if(email =="admin@admin" && password =="admin"){
+     window.location.href = "indexadmin.html";
+   }else if(email =="" && password ==""){
+    alert ("Data tidak boleh kosong") ;
+    return false;
   }
-  
+  else if(email !="" && password !=""){
+   window.location.href = "indexsetelahlogin.html";
+ }
+ else{
+  alert ("Data tidak boleh kosong") ;
+  return false;
+}
+}
+
 </script>
 </html>
