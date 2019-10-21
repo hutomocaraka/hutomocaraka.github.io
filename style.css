@@ -487,6 +487,11 @@ input.btnreg{
     color: #245770;
   }
 
+  .tambah img{
+  width: 20%;
+  margin-top: -30px;
+}
+
 /*.container h1 {
     margin-top: 10px;
     margin-bottom: 20px;
