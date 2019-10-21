@@ -347,9 +347,14 @@ input.btnreg{
 }
 
 .ubaha img{
-  width: 10%;
+  width: 8%;
   margin-top: 20px;
   margin-bottom: -20px;
+}
+
+.tambah img{
+  width: 10%;
+  margin-top: -30px;
 }
 
 .edita img{
