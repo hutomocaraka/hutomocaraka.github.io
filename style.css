@@ -150,6 +150,12 @@ hr {
   width: 100%;
 }
 
+.materi{
+  background-image: url(../img/ubaha.png);
+  right: 0;
+  display: block;
+}
+
 .materi tr th a{
   text-decoration: none;
   color: #245770;
@@ -252,7 +258,7 @@ input.btnreg{
   right: 35px;
   /*background-color: #111; /* Black */*/
   /*overflow-x: hidden;  Disable horizontal scroll */
-  padding-top: 20px;
+  padding-top: 20px; 
 }
 
 /* The navigation menu links */
@@ -318,15 +324,7 @@ input.btnreg{
   font-family: gotham;
 }
 
-.ebook{
-  float: right;
-  margin: -380px 400px 0px 100px;
-}
 
-.ebook a{
-  text-decoration: none;
-  color: #245770 ;
-}
 
 .konten1{
   padding: 14px 16px;
@@ -341,9 +339,9 @@ input.btnreg{
 }
 
 .materi{
-  padding: 14px 16px;
+  padding: 14px 50px;
   width: auto;
-  margin: 0px 20px 20px 20px;
+  margin: 0px 20px 20px 150px;
 }
 
 .ubaha img{
@@ -361,136 +359,178 @@ input.btnreg{
   width: 30%;
 }
 
-@media screen and (max-width:720px) {
-  .show-menu-btn,.hide-menu-btn{
-    display: block;
-  }
-
-  .logo img{
-    width: 50%;
-    margin-bottom: 30px;
-  }
-
-  .menu{
-    position: fixed;
-    width: 100%;
-    background: white;
-    right: -100%;
-    top: 0;
-    text-align: right;
-    padding: 80px 0;
-    line-height: normal;
-    transition: 0.7s;
-  }
-  .menu a{
-    display: block;
-    padding: 20px;
-  }
-  .hide-menu-btn{
-    position: absolute;
-    top: 40px;
-    right: 40px;
-  }
-  #chk:checked ~ .menu{
-    right: 0;
-  }
-
-  .konten img{
-    width: 100%;
-  }
-
-  .gambar img{
-    width: 100%;
-  }
-
-
-  .gambar tr th{
-    width: 100%;
-    display: block;
-  }
-
-  .materi tr th{
-    width: 100%;
-    margin-bottom: 20px;
-    display: block;
-  }
-
-  .artikel tr th{
-    width: 100%;
-    display: block;
-    margin-left: 70px;
-  }
-
-  .container h1 {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 50px;
-    color: #245770;
-  }
-
-
-  input.register, input.login{
-    border-radius: 20px;
-    padding: 5px;
-    color: #245770;
-    border: 3px solid #245770;
-    margin: 0 auto;
-    height: 25px;
-    width: 150%;
-    font-family: Gotham;
-    margin-bottom: 20px;
-    align-content: center;
-    margin-left: -40px;
-  }
-
-  .konten p{
-    text-align: justify;
-  }
-  .sidenav {
-    padding-top: 15px;
-    width: 80%;
-    position: static;
-    margin:20px 0px 20px 35px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-
-  .pp img {
-    width: 50%;
-    margin: 20px 20px 20px 120px;
-  }
-
-  .formedit{
-    margin: 20px 80px 20px 20px;
-  }
-
-  .ebook {
-    margin: 20px 0px 20px 90px;
-    float: left;
-  }
-
-  iframe{
-    width: 140%;
-  }
-
-  .ubaha img{
-    width: 30%;
-  }
-
-  .formtambah{
-    margin-left: 50px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #245770;
-  }
-
-  .tambah img{
-  width: 20%;
-  margin-top: -30px;
+.tabmateri img{
+  width: 100px;
+  margin : 10px 50px 0px 200px;
+  padding: 10px 0px 0px 0px;
 }
+
+.active{
+  background-color:#e8eded;
+  color:#fff;
+
+}
+
+/* The sidebar menu */
+.sidenavMateri{
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 10; /* Stay at the top */
+  left: 0;
+  background-color: #41577a; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+/* The navigation menu links */
+.sidenavMateri a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenavMateri a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+/*.main {
+  margin-left: 160px;  Same as the width of the sidebar 
+  padding: 0px 10px;
+  }*/
+
+  @media screen and (max-width:720px) {
+    .show-menu-btn,.hide-menu-btn{
+      display: block;
+    }
+
+    .logo img{
+      width: 50%;
+      margin-bottom: 30px;
+    }
+
+    .menu{
+      position: fixed;
+      width: 100%;
+      background: white;
+      right: -100%;
+      top: 0;
+      text-align: right;
+      padding: 80px 0;
+      line-height: normal;
+      transition: 0.7s;
+    }
+    .menu a{
+      display: block;
+      padding: 20px;
+    }
+    .hide-menu-btn{
+      position: absolute;
+      top: 40px;
+      right: 40px;
+    }
+    #chk:checked ~ .menu{
+      right: 0;
+    }
+
+    .konten img{
+      width: 100%;
+    }
+
+    .gambar img{
+      width: 100%;
+    }
+
+
+    .gambar tr th{
+      width: 100%;
+      display: block;
+    }
+
+    .materi tr th{
+      width: 100%;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .artikel tr th{
+      width: 100%;
+      display: block;
+      margin-left: 70px;
+    }
+
+    .container h1 {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 50px;
+      color: #245770;
+    }
+
+
+    input.register, input.login{
+      border-radius: 20px;
+      padding: 5px;
+      color: #245770;
+      border: 3px solid #245770;
+      margin: 0 auto;
+      height: 25px;
+      width: 150%;
+      font-family: Gotham;
+      margin-bottom: 20px;
+      align-content: center;
+      margin-left: -40px;
+    }
+
+    .konten p{
+      text-align: justify;
+    }
+    .sidenav {
+      padding-top: 15px;
+      width: 80%;
+      position: static;
+      margin:20px 0px 20px 35px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+
+    .pp img {
+      width: 50%;
+      margin: 20px 20px 20px 120px;
+    }
+
+    .formedit{
+      margin: 20px 80px 20px 20px;
+    }
+
+
+    iframe{
+      width: 140%;
+    }
+
+    .ubaha img{
+      width: 30%;
+    }
+
+    .formtambah{
+      margin-left: 50px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #245770;
+    }
+
+    .tambah img{
+      width: 20%;
+      margin-top: -30px;
+    }
 
 /*.container h1 {
     margin-top: 10px;
