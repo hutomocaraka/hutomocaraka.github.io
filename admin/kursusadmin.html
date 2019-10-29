@@ -11,7 +11,7 @@
 <body>
 	<div class="header">
 		<div class="logo">
-			<a href="indexlogin.html">
+			<a href="index.html">
 				<img src="../img/logo.png">
 			</a>
 		</div>
@@ -22,16 +22,16 @@
 
 		<ul class="menu">
 			<input type="text" class="search" placeholder="Search..">
-			<a href="indexlogin.html">Beranda</a>
-			<a href="readberita.html">Berita</a>
+			<a href="indexsetelahlogin.html">Beranda</a>
+			<a href="beritasetelahlogin.html">Berita</a>
 			<a href="tips.html">Tips & Trik</a>
 			<div class="dropdown">
 				<button class="dropbtn">Profil
 					<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-					<a href="profiladmin.html">Profil Saya</a>
-					<a href="../login.html">Logout</a>
+					<a href="profil.html">Profil Saya</a>
+					<a href="index.html">Logout</a>
 				</div>
 			</div>
 			<div class="dropdown">
@@ -40,8 +40,8 @@
 				</button>
 				<div class="dropdown-content">
 					<a href="#">Kursus</a>
-					<a href="readvideo.html">Video Pembelajaran</a>
-					<a href="readmateri.html">Materi Pembelajaran</a>
+					<a href="video.html">Video Pembelajaran</a>
+					<a href="materi.html">Materi Pembelajaran</a>
 				</div>
 			</div>
 
@@ -56,51 +56,62 @@
 	<div class="step" >
 		<a href="index.html">Beranda ></a>
 		<a >Jenis ></a>
-		<a href="materi.html">Materi Pembelajaran</a>
-		<a href="materi.html">> SQL Tutorial</a>
+		<a href="kursus.html">Kursus</a>
 	</div>
 
-	<div class="sidenavMateri">
-		<a class="list active" href="materi.html">SQL Tutorial</a>
-		<a href="materi2.html">SQL Database</a>
-		<a href="materi3.html">SQL Reference</a>
-
-	</div>
-	<table class="tabmateri">
-		<tr>
-			<td>
-				<a href="createmateri.html"><img src="../img/tambah.png"></a>
-			</td>
-			<td>
-				<a href="createmateri.html"><img src="../img/ubaha.png"></a>
-			</td>
-		</tr>
+	<div class="konten1">
+		<h1>Jadwal Kursus</h1>
+		<table class="kursus">
+			<tr>
+				<th>Hari</th>
+				<th>Pukul</th>
+				<th>Tempat</th>
+			</tr>
+			<tr>
+				<td>Senin</td>
+				<td>15.00 WIB</td>
+				<td>Ruang 5</td>
+			</tr>
+			<tr>
+				<td>Selasa</td>
+				<td>16.00 WIB</td>
+				<td>Ruang 3</td>
+			</tr>
+			<tr>
+				<td>Rabu</td>
+				<td>15.00 WIB</td>
+				<td>Ruang 5</td>
+			</tr>
+			<tr>
+				<td>Kamis</td>
+				<td>16.00 WIB</td>
+				<td>Ruang 5</td>
+			</tr>
+			<tr>
+				<td>Jumat</td>
+				<td>15.00 WIB</td>
+				<td>Ruang 2</td>
+			</tr>
+		</table>
+		<br>
+		<table class="btnkursus">
+			<tr>
+				<td>
+					<div class="btn">
+						<a href="createartikel.html"><img src="../img/tambah.png"></a>
+					</div>
+				</td>
+				<td>
+					<div class="btn">
+						<a href="createartikel.html"><img src="../img/ubaha.png"></a>
+					</div>
+				</td>
+			</tr>
 			
-		</th>
-	</table>
+		</table>
+		
+	</div>
 
-	<table class="materi">
-		<tr>
-			<th >
-				<a href="../img/materi1.pdf">
-					<img src="../img/materi1.png" width="100%">Materi 1
-				</a>
-			</th>
-			<th >
-				<a href="../img/materi1.pdf">
-					<img src="../img/materi2.png" width="100%">Materi 2
-				</a>
-			</th>
-			<th >
-				<a href="../img/materi1.pdf">
-					<img src="../img/materi3.png" width="100%">Materi 3
-				</a>
-			</th>
-
-
-		</tr>
-
-	</table>
 
 </body>
 </html>
