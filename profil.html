@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <script type="text/javascript" src="jquery/jquery-2.2.4.js"></script>
 </head>
 <body>
   <div class="header">
@@ -62,25 +63,67 @@
     <tr>
       <td>
         <div class="pp">
-          <a href="editprofil.html">
-            <img src="img/profil.png" input type="file" ></a>
-          </div>
-        </td>
-        <td>
-          <div class="formedit">
-             <div class="btn"><a href="ubahprofil.html"><img src="img/ubaha.png"></a></div><br>
-            <input type="text" class="edit" placeholder="Nama Kamu adalah.." ><br><br>
-            <input type="text" class="edit" placeholder="Alamat ...."><br><br>
-            <input type="text" class="edit" placeholder="Email ....."><br><br>
-            <input type="text" class="edit" placeholder="Username ...."><br><br>
-            <input type="password" class="edit" placeholder="Password"><br><br>
-          </div>
-        </td>
-      </tr>
-    </table>
+          <div class="row">
+           <div class="small-12 medium-2 large-2 columns">
+             <div class="circle">
+               <!-- User Profile Image -->
+               <img class="profile-pic" src="http://cdn.cutestpaw.com/wp-content/uploads/2012/07/l-Wittle-puppy-yawning.jpg">
+
+               <!-- Default Image -->
+               <!-- <i class="fa fa-user fa-5x"></i> -->
+             </div>
+             <div class="p-image">
+               <i class="fa fa-camera upload-button"></i>
+               <input class="file-upload" id="nama_file" type="file" accept="image/*"/>
+             </div>
+           </div>
+         </div>
+       </div>
+     </td>
+     <td>
+      <div class="formedit">
+       <div class="btn"><a href="ubahprofil.html"><img src="img/ubaha.png"></a></div><br>
+       <input type="text" class="edit" placeholder="Nama Kamu adalah.." ><br><br>
+       <input type="text" class="edit" placeholder="Alamat ...."><br><br>
+       <input type="text" class="edit" placeholder="Email ....."><br><br>
+       <input type="text" class="edit" placeholder="Username ...."><br><br>
+       <input type="password" class="edit" placeholder="Password"><br><br>
+     </div>
+   </td>
+ </tr>
+</table>
 
 
 
-  </div>
+</div>
 </body>
 </html>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+
+    var readURL = function(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $('.profile-pic').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    
+
+    $(".file-upload").on('change', function(){
+      readURL(this);
+    });
+    
+    $(".upload-button").on('click', function() {
+     $(".file-upload").click();
+     
+   });
+
+});
+</script>
