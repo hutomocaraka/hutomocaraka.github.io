@@ -132,6 +132,11 @@ hr {
   font-size: 40px;
 }
 
+.konten h2, p, i{
+  color: #245770;
+  text-align: center;
+}
+
 .konten img{
   width: 30%;
 }
@@ -151,6 +156,9 @@ hr {
 
 .gambar img{
   width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+
 }
 
 .materi{
@@ -660,4 +668,12 @@ img {
 .upload-button:hover {
   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
   color: #999;
+}
+
+.box td{
+  padding: 40px;
+  width: 30%;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+  background-color: white;
 }

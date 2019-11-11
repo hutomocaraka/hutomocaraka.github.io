@@ -55,7 +55,10 @@
 <div class="formtambah">
   <form>
     <label>Judul Artikel : </label><br><input type="text" class="edit" placeholder="" ><br><br>
-    <label>Gambar Artikel : </label><br><input type="file" accept="image/x-png,image/gif,image/jpeg" placeholder="" ><br><br>
+    <div class="file--upload">
+      <label>Gambar Berita : </label>
+      <input type="file" onchange="readURL(this)" class="" accept="image/x-png,image/gif,image/jpeg" placeholder="" ><br><br>
+    </div>
     <label>Artikel :</label><br>
     <textarea cols="40" rows="20"></textarea>
     <table>
@@ -73,6 +76,39 @@
   </form>
 </div>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="../jquery/jquery.min.js"></script>
+<script type="text/javascript">
+function readURL(input) { // Mulai membaca inputan gambar
+  if (input.files && input.files[0]) {
+var reader = new FileReader(); // Membuat variabel reader untuk API FileReader
 
+reader.onload = function (e) { // Mulai pembacaan file
+$('.image--preview') // Tampilkan gambar yang dibaca ke area id #preview_gambar
+.attr('src', e.target.result)
+.width(150); // Menentukan lebar gambar preview (dalam pixel)
+//.height(200); // Jika ingin menentukan lebar gambar silahkan aktifkan perintah pada baris ini
+
+
+}
+$('.image--type').html(input.files[0].type);
+$('.image--name').html(input.files[0].name);
+$('.image--size').html(input.files[0].size);
+reader.readAsDataURL(input.files[0]);
+}
+}
+$('.file--upload input').change(function () {
+  $('.image--detail-all').remove();
+  $('.file--upload').append(`
+    <ul class="ul__list">
+    <img class="image--preview" src= alt="">
+    <li>Nama File : <span class="image--name" onchange="readURL(this)"></span></li>
+    <li>Ukuran : <span class="image--size" onchange="readURL(this)"></span></li>
+    <li>Tipe: <span class="image--type" onchange="readURL(this)"></span></li>
+    </ul>
+    `);
+  readURL(this);
+});
+</script>
 </body>
 </html>
