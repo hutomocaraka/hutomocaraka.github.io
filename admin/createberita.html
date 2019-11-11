@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
   <title>belajarDB</title>
   <link rel="stylesheet" href="../style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,73 +55,97 @@
 <div class="formtambah">
   <form>
     <label>Judul Berita : </label><input type="text" class="edit" placeholder="" ><br><br>
-    <label>Gambar Berita : </label><input type="file" class="" accept="image/x-png,image/gif,image/jpeg" placeholder="" ><br><br>
+    <div class="file--upload">
+      <label>Gambar Berita : </label>
+      <input type="file" onchange="readURL(this)" class="" accept="image/x-png,image/gif,image/jpeg" placeholder="" ><br><br>
+    </div>
+
+    <!-- <img id="preview_gambar" src="#" alt="Gambar Anda">
+    <ul class="ul__list">
+      <li>Nama foto : <span class="image--name" onchange="readURL(this)"></span></li>
+      <li>Size : <span class="image--size" onchange="readURL(this)"></span></li>
+      <li>type : <span class="image--type" onchange="readURL(this)"></span></li>
+    </ul> -->
+    
+
     <label>Berita :</label>
     <textarea cols="40" rows="20"></textarea>
     <table>
       <center>
-      <tr>
-        <td> 
-          <button type="submit" class="btn-create">Simpan</button>
-        </td>
-        <td>
-          <button type="reset" class="btn-create">Ulang</button>
-        </td>
-      </tr>
+        <tr>
+          <td> 
+            <button type="submit" class="btn-create">Simpan</button>
+          </td>
+          <td>
+            <button type="reset" class="btn-create">Ulang</button>
+          </td>
+        </tr>
       </center>        
     </table>
   </form>
 </div>
 
-<script type="text/javascript" src="jquery/jquery.min.js"></script>
-<script type="text/javascript" src="jquery/belajarDB.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
+<script type="text/javascript" src="../jquery/jquery.min.js"></script>
 <script type="text/javascript">
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
+function readURL(input) { // Mulai membaca inputan gambar
+  if (input.files && input.files[0]) {
+var reader = new FileReader(); // Membuat variabel reader untuk API FileReader
 
-        reader.onload = function(e) {
-          $('.image--preview').attr('src', e.target.result);
-      }
+reader.onload = function (e) { // Mulai pembacaan file
+$('.image--preview') // Tampilkan gambar yang dibaca ke area id #preview_gambar
+.attr('src', e.target.result)
+.width(150); // Menentukan lebar gambar preview (dalam pixel)
+//.height(200); // Jika ingin menentukan lebar gambar silahkan aktifkan perintah pada baris ini
 
-      $('.image--type').html(input.files[0].type);
-      $('.image--name').html(input.files[0].name);
-      $('.image--size').html(input.files[0].size);
-
-      reader.readAsDataURL(input.files[0]);
-
-      // console.log(input.files);
-
-     //  var image = new Image();
-     //  image.src = input.files.target.result();
-     //  image.onload = function () {
-     //     console.log(this.width + " " + this.height);
-     // };
- }
 
 }
-
+$('.image--type').html(input.files[0].type);
+$('.image--name').html(input.files[0].name);
+$('.image--size').html(input.files[0].size);
+//memeriksa data form 
+    if (input.files[0].size > 1048576) {
+        $('.foto--error').remove();
+        $('.image--detail-all').remove();
+        $('.file--upload input').val('');
+        $('.file--upload').append('<p  class="foto--error" style="color:red">Ukuran tidak boleh lebih dari 1 mb</p>');
+        console.log('lebih dari 1mb');
+      }else{
+        if (input.files[0].type == 'image/png' || input.files[0].type == 'image/jpg' || input.files[0].type == 'image/jpeg' ) {
+          console.log('bener sihhh');
+          $('.foto--error').remove();
+        } else {
+          console.log('salah');
+          $('.foto--error').remove();
+          $('.image--detail-all').remove();
+          $('.file--upload input').val('');
+          $('.file--upload').append('<p class="foto--error" style="color:red">Hanya untuk upload foto dengan format jpg, jpeg dan png</p>');
+        }
+      }
+reader.readAsDataURL(input.files[0]);
+}
+}
 $('.file--upload input').change(function () {
-    $('.image--detail-all').remove();
-    $('.file--upload').append(`
-        <div class="grid-row image--detail-all">
-        <div class="grid-item-6">
-        <img class="image--preview" src="" alt="">
-        </div>
-        <div class="grid-item-6">
-        <ul class="ul__list">
-        <li>Nama foto : <span class="image--name"></span></li>
-        <li>Size : <span class="image--size"></span></li>
-        <li>type : <span class="image--type"></span></li>
-        </ul>
-        </div>
-        </div>
-        `);
-    readURL(this);
+  $('.image--detail-all').remove();
+  $('.file--upload').append(`
+    <ul class="ul__list">
+    <img class="image--preview" src= alt="">
+    <li>Nama File : <span class="image--name" onchange="readURL(this)"></span></li>
+    <li>Ukuran : <span class="image--size" onchange="readURL(this)"></span></li>
+    <li>Tipe: <span class="image--type" onchange="readURL(this)"></span></li>
+    </ul>
+    `);
+  readURL(this);
 });
 
 </script>
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+
+
+</script> -->
+
+
 
 </body>
 </html>
