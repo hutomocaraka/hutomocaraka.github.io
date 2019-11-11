@@ -132,6 +132,11 @@ hr {
   font-size: 40px;
 }
 
+.konten h2, p, i{
+  color: #245770;
+  text-align: center;
+}
+
 .konten img{
   width: 30%;
 }
@@ -151,6 +156,9 @@ hr {
 
 .gambar img{
   width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+
 }
 
 .materi{
@@ -627,24 +635,26 @@ input .krs{
 
 .file-upload {
     display: none;
+    margin-left: 200px;
 }
 .circle {
+    margin-left: 80px;
+    margin-right: 70px;
     border-radius: 1000px !important;
     overflow: hidden;
-    width: 128px;
-    height: 128px;
-    border: 8px solid rgba(255, 255, 255, 0.7);
-    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 8px solid #245770;
     top: 72px;
+    background-image: url(img/profil.png);
+    background-position: center;
 }
 img {
     max-width: 100%;
     height: auto;
 }
 .p-image {
-  position: absolute;
-  top: 167px;
-  right: 30px;
+  margin: 0px 20px 0px 400px;
   color: #666666;
   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 }
@@ -658,4 +668,12 @@ img {
 .upload-button:hover {
   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
   color: #999;
+}
+
+.box td{
+  padding: 40px;
+  width: 30%;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+  background-color: white;
 }

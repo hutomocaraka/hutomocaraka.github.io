@@ -86,7 +86,10 @@
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9920c3b3416355f6fc803794d9597017057bf0e4
 <script type="text/javascript" src="../jquery/jquery.min.js"></script>
 <script type="text/javascript">
 function readURL(input) { // Mulai membaca inputan gambar
@@ -104,6 +107,7 @@ $('.image--preview') // Tampilkan gambar yang dibaca ke area id #preview_gambar
 $('.image--type').html(input.files[0].type);
 $('.image--name').html(input.files[0].name);
 $('.image--size').html(input.files[0].size);
+<<<<<<< HEAD
 //memeriksa data form 
     if (input.files[0].size > 1048576) {
         $('.foto--error').remove();
@@ -123,6 +127,8 @@ $('.image--size').html(input.files[0].size);
           $('.file--upload').append('<p class="foto--error" style="color:red">Hanya untuk upload foto dengan format jpg, jpeg dan png</p>');
         }
       }
+=======
+>>>>>>> 9920c3b3416355f6fc803794d9597017057bf0e4
 reader.readAsDataURL(input.files[0]);
 }
 }
@@ -138,8 +144,8 @@ $('.file--upload input').change(function () {
     `);
   readURL(this);
 });
-
 </script>
+<<<<<<< HEAD
 <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 
 
@@ -147,5 +153,7 @@ $('.file--upload input').change(function () {
 
 
 
+=======
+>>>>>>> 9920c3b3416355f6fc803794d9597017057bf0e4
 </body>
 </html>
