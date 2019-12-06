@@ -24,13 +24,28 @@
       <a href="index.html">Beranda</a>
       <a href="berita.html">Berita</a>
       <div class="dropdown">
-        <button class="dropbtn">Profil
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="login.html">Login</a>
-        </div>
+        <button onclick="document.getElementById('id01').style.display='block'" class="lgn"></button>
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'"
+          class="close" title="Close Modal">&times;</span>
+
+          <!-- Modal Content -->
+          <form class="modal-content animate" action="indexsetelahlogin.html">
+           <div class="container">
+             <h1>Login</h1>
+             <hr>
+             <form action="#!" name="logins">
+              <input type="email" class="login" id="email" placeholder="Email" >
+              <input type="password" class="login" id="password" placeholder="Password" >
+              <br>
+              <input type="submit" class="btnlgn" onclick="returnValidation()" value=" " />
+            </form>
+
+            <p>Belum jadi member ? Daftar <a href="register.html"> disini</a>.</p>
+          </div>
+        </form>
       </div>
+    </div>
       <label for="chk" class="hide-menu-btn">
         <i class="fas fa-times"></i>
       </label>
