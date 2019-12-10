@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 	<link rel="shortcut icon" href="img/lg.png">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 <body>
 	<div class="header">
@@ -132,41 +132,52 @@
 	</table> -->
 
 
-	
-    <script type="text/javascript">
+	<script type="text/javascript" src="jquery/a/jquery.min.js"></script>
+    <script>
+        $(".more_btn").click(function () {
+            
+                $(".more_btn").hide();
+            
+            var url = "json/materi.json"
 
-
-      $(".more_btn").click(function () {
-        $.getJSON('json/materi.json', function (data) {
-
-            console.log( data );
-
-            $.each(data, function (n, elem) {
-                console.log('foto '+elem['foto']+' - judul '+elem['judul'])
-                $('.materis').append(`
-                 <div class="title">
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json'
+            })
+            .done(function (hama) {
+                console.log("sukses");
+                var data = "";
+                $.each(hama, function (index, val) {
+                    data += `
+                        <div class="title">
 					<h1>SQL Tutorial</h1>
 				</div>
 				<div class="materiii">
 					<div class="isi">
-						<img src="`+elem['foto']+`" alt="" id="img1">
+						<img src="`+val.gambar+`" alt="" id="img1">
 						<h4 id="img">Materi 1</h4>
 					</div>
 					<div class="isi">
-						<img src="`+elem['foto']+`" alt="" id="img2">
+						<img src="`+val.gambar+`" alt="" id="img2">
 						<h4 id="img">Materi 2</h4>
 					</div>
 					<div class="isi">
-						<img src="`+elem['foto']+`" alt="" id="img3">
+						<img src="`+val.gambar+`" alt="" id="img3">
 						<h4 id="img">Materi 3</h4>
 					</div>
 				</div>
-                 `);
-            });
+                    `;  
+                });
+
+                $(".materis").append(data);
+            })
+            .fail(function () {
+                console.log("error");
+            })
 
         });
-    });
-</script>
+    </script>
 
 </body>
 </html>
