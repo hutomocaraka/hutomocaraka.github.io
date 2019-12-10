@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<title>belajarDB</title>
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 	<link rel="shortcut icon" href="img/lg.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -60,14 +62,39 @@
 		<a href="materi.html">> SQL Tutorial</a>
 	</div>
 
-	<div class="sidenavMateri">
+	<div class="konten">
+		<div class="daftar_materi">
+			<div class="materis" page="">
+				<div class="title">
+					<h1>SQL Tutorial</h1>
+				</div>
+				<div class="materiii">
+					<div class="isi">
+						<img src="img/materi1.png" alt="" id="img1">
+						<h4 id="img">Materi 1</h4>
+					</div>
+					<div class="isi">
+						<img src="img/materi1.png" alt="" id="img2">
+						<h4 id="img">Materi 2</h4>
+					</div>
+					<div class="isi">
+						<img src="img/materi1.png" alt="" id="img3">
+						<h4 id="img">Materi 3</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<button class="more_btn" style="text-align: center;">More</button>
+	</div>
+	<!-- <div class="sidenavMateri">
   <a class="list active" href="materi.html">SQL Tutorial</a>
   <a href="materi2.html">SQL Database</a>
   <a href="materi3.html">SQL Reference</a>
+</div> -->
 
-</div>
 
-	<table class="materi">
+	<!-- <table class="materi">
 		<tr>
 			<th >
 				<a href="img/materi1.pdf">
@@ -84,11 +111,62 @@
 					<img src="img/materi3.png" width="100%">Materi 3
 				</a>
 			</th>
-			
-
 		</tr>
+		<tr>
+			<th >
+				<a href="img/materi1.pdf">
+					<img src="img/materi1.png" width="100%">Materi 1
+				</a>
+			</th>
+			<th >
+				<a href="img/materi1.pdf">
+					<img src="img/materi2.png" width="100%">Materi 2
+				</a>
+			</th>
+			<th >
+				<a href="img/materi1.pdf">
+					<img src="img/materi3.png" width="100%">Materi 3
+				</a>
+			</th>
+		</tr>
+	</table> -->
 
-	</table>
+
+	
+    <script type="text/javascript">
+
+
+      $(".more_btn").click(function () {
+        $.getJSON('json/materi.json', function (data) {
+
+            console.log( data );
+
+            $.each(data, function (n, elem) {
+                console.log('foto '+elem['foto']+' - judul '+elem['judul'])
+                $('.materis').append(`
+                 <div class="title">
+					<h1>SQL Tutorial</h1>
+				</div>
+				<div class="materiii">
+					<div class="isi">
+						<img src="`+elem['foto']+`" alt="" id="img1">
+						<h4 id="img">Materi 1</h4>
+					</div>
+					<div class="isi">
+						<img src="`+elem['foto']+`" alt="" id="img2">
+						<h4 id="img">Materi 2</h4>
+					</div>
+					<div class="isi">
+						<img src="`+elem['foto']+`" alt="" id="img3">
+						<h4 id="img">Materi 3</h4>
+					</div>
+				</div>
+                 `);
+            });
+
+        });
+    });
+</script>
 
 </body>
 </html>
