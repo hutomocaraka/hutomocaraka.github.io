@@ -57,7 +57,7 @@
     <label>Judul Artikel : </label><br><input type="text" class="edit" placeholder="" ><br><br>
     <div class="file--upload">
       <label>Gambar Berita : </label>
-      <input type="file" onchange="readURL(this)" class="" accept="image/x-png,image/gif,image/jpeg" placeholder="" ><br><br>
+      <input type="file" class="" accept="image/x-png,image/gif,image/jpeg" placeholder="" ><br><br>
     </div>
     <label>Artikel :</label><br>
     <textarea cols="40" rows="20"></textarea>
@@ -116,9 +116,9 @@ reader.readAsDataURL(input.files[0]);
 }
 }
 $('.file--upload input').change(function () {
-  $('.image--detail-all').remove();
+  $('.image__delete').remove();
   $('.file--upload').append(`
-    <ul class="ul__list">
+    <ul class="ul__list image__delete">
     <img class="image--preview" src= alt="">
     <li>Nama File : <span class="image--name" onchange="readURL(this)"></span></li>
     <li>Ukuran : <span class="image--size" onchange="readURL(this)"></span></li>
