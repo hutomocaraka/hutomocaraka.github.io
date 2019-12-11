@@ -93,6 +93,7 @@ hr {
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
+  z-index: 99;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
