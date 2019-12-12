@@ -11,7 +11,7 @@
 <body>
   <div class="header">
     <div class="logo">
-        <a href="indexadmin.html">
+        <a href="../index.html">
           <img src="../img/logo.png">
         </a>
       </div>
@@ -25,13 +25,28 @@
       <a href="indexadmin.html">Beranda</a>
       <a href="berita.html">Berita</a>
       <div class="dropdown">
-        <button class="dropbtn">Profil
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="../login.html">Login</a>
-        </div>
+        <button onclick="document.getElementById('id01').style.display='block'" class="lgn"></button>
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'"
+          class="close" title="Close Modal">&times;</span>
+
+          <!-- Modal Content -->
+          <form class="modal-content animate" action="indexsetelahlogin.html">
+           <div class="container">
+             <h1>Login</h1>
+             <hr>
+             <form action="#!" name="logins">
+              <input type="email" class="login" id="email" placeholder="Email" >
+              <input type="password" class="login" id="password" placeholder="Password" >
+              <br>
+              <input type="submit" class="btnlgn" onclick="returnValidation()" value=" " />
+            </form>
+
+            <p>Belum jadi member ? Daftar <a href="register.html"> disini</a>.</p>
+          </div>
+        </form>
       </div>
+    </div>
       <label for="chk" class="hide-menu-btn">
         <i class="fas fa-times"></i>
       </label>
@@ -43,7 +58,7 @@
     <table>
       <tr>
         <h1>Cara Menentukan Primary Key di Dalam Database </h1>
-        <center><img src="img/pk.gif" width="100%"></center>
+        <center><img src="../img/pk.gif" width="100%"></center>
         <p>Buat kamu yang sudah malang-melintang di dunia basis data atau database, pastinya sudah tidak begitu asing mengenai istilah primary key. Primary key sendiri jika diartikan merupakan kunci utama atau kunci pertama. maksud dari primary key di dalam database atau basis data adalah sebuah tanda yang digunakan untuk dapat menandai ataupun mengidentifikasi suatu nilai data yang ada di dalam database.</p>
         <p>Adanya kode primary key sendiri di dalam database atau basis data merupakan sebuah kode yang sangat penting. Fungsi sebuah primary key di dalam sebuah database adalah untuk memudahkan proses didalam pengolahan data. Selain itu, sebuah primary key juga dapat berperan ketika akan mencari proses data yang dibutuhkan.</p>
         <p>Dalam memberikan ketetapan primary key pada sebuah data, maka data tersebut dapat dibedakan mana data yang utama dan mana data yang tidak begitu diperhatikan. Hal ini tentunya sangat penting digunakan pada saat memasukan data-data yang akan digunakan. Maka dari itu, pastinya kita berpikir seperti apa data tersebut dapat disebut sebagai primary key. Untuk dapat mengetahuinya, berikut beberapa cara menentukannya.</p>
@@ -83,6 +98,29 @@
   </div>
 </div>
 
+<script type="text/javascript">
+    function returnValidation(){
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      console.log(email);
+
+      if(email =="admin@admin" && password =="admin"){
+       window.location.href = "admin/indexlogin.html";
+     }else if(email =="" && password ==""){
+      alert ("Data tidak boleh kosong") ;
+      return false;
+    }
+    else if(email !="" && password !=""){
+     window.location.href = "indexsetelahlogin.html";
+   }
+   else{
+    alert ("Data tidak boleh kosong") ;
+    return false;
+  }
+}
+
+</script>
 
 
 </body>

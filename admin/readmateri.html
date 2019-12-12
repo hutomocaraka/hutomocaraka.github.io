@@ -31,7 +31,7 @@
 				</button>
 				<div class="dropdown-content">
 					<a href="profiladmin.html">Profil Saya</a>
-					<a href="../login.html">Logout</a>
+					<a href="../index.html">Logout</a>
 				</div>
 			</div>
 			<div class="dropdown">
@@ -59,27 +59,57 @@
 		<a href="materi.html">Materi Pembelajaran</a>
 		<a href="materi.html">> SQL Tutorial</a>
 	</div>
+	<div class="konten">
+		<div class="daftar_materi">
+			<div class="materis" page="">
+				<div class="title">
+					<h1>SQL Tutorial</h1>
+				</div>
 
-	<div class="sidenavMateri">
+				<table class="tabmateri">
+					<tr>
+						<td>
+							<a href="createmateri.html"><img src="../img/tambah.png"></a>
+						</td>
+						<td>
+							<a href="createmateri.html"><img src="../img/ubaha.png"></a>
+						</td>
+					</tr>
+
+				</th>
+			</table>
+			<div class="materiii">
+				<div class="isi">
+					<a href="../img/materi1.pdf">
+						<img src="../img/materi1.png" alt="" id="img1"></a>
+						<h4 id="img">Materi 1</h4>
+					</div>
+					<div class="isi">
+						<a href="../img/materi1.pdf">
+							<img src="../img/materi1.png" alt="" id="img2"></a>
+							<h4 id="img">Materi 2</h4>
+						</div>
+						<div class="isi">
+							<a href="../img/materi1.pdf">
+								<img src="../img/materi1.png" alt="" id="img3"></a>
+								<h4 id="img">Materi 3</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<button class="more_btn" >More</button>
+			</div>
+
+	<!-- <div class="sidenavMateri">
 		<a class="list active" href="materi.html">SQL Tutorial</a>
 		<a href="materi2.html">SQL Database</a>
 		<a href="materi3.html">SQL Reference</a>
 
-	</div>
-	<table class="tabmateri">
-		<tr>
-			<td>
-				<a href="createmateri.html"><img src="../img/tambah.png"></a>
-			</td>
-			<td>
-				<a href="createmateri.html"><img src="../img/ubaha.png"></a>
-			</td>
-		</tr>
-			
-		</th>
-	</table>
+	</div> -->
+	
 
-	<table class="materi">
+<!-- 	<table class="materi">
 		<tr>
 			<th >
 				<a href="../img/materi1.pdf">
@@ -100,7 +130,57 @@
 
 		</tr>
 
-	</table>
+	</table> -->
+
+
+	<script type="text/javascript" src="../jquery/a/jquery.min.js"></script>
+	<script>
+		$(".more_btn").click(function () {
+
+
+			var url = "https://raw.githubusercontent.com/hutomocaraka/hutomocaraka.github.io/master/json/materi.json"
+
+			$.ajax({
+				url: url,
+				type: 'GET',
+				dataType: 'json'
+			})
+			.done(function (materi) {
+				console.log("sukses");
+				var data = "";
+				$.each(materi, function (index, val) {
+					data += `
+
+					</div>
+					<div class="materiii">
+					<div class="isi">
+					<a href="../img/materi1.pdf">
+					<img src="../`+val.foto+`" alt="" id="img1"></a>
+					<h4 id="img">Materi 1</h4>
+					</div>
+					<div class="isi">
+					<a href="../img/materi1.pdf">
+					<img src="../`+val.foto+`" alt="" id="img2"></a>
+					<h4 id="img">Materi 2</h4>
+					</div>
+					<div class="isi">
+					<a href="../img/materi1.pdf">
+					<img src="../`+val.foto+`" alt="" id="img3"></a>
+					<h4 id="img">Materi 3</h4>
+					</div>
+					</div>
+					`;  
+				});
+
+				$(".materis").append(data);
+			})
+			.fail(function () {
+				console.log("error");
+			})
+
+		});
+	</script>
+
 
 </body>
 </html>
