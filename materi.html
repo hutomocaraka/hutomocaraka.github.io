@@ -85,7 +85,7 @@
 			</div>
 		</div>
 		
-		<button class="more_btn" style="text-align: center;">More</button>
+		<button class="more_btn" >More</button>
 	</div>
 	<!-- <div class="sidenavMateri">
   <a class="list active" href="materi.html">SQL Tutorial</a>
@@ -144,10 +144,10 @@
                 type: 'GET',
                 dataType: 'json'
             })
-            .done(function (hama) {
+            .done(function (materi) {
                 console.log("sukses");
                 var data = "";
-                $.each(hama, function (index, val) {
+                $.each(materi, function (index, val) {
                     data += `
                       
 				</div>
