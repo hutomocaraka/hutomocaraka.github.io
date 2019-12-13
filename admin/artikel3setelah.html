@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>belajarDB</title>
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <link rel="shortcut icon" href="../img/lg.png">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="indexsetelahlogin.html">
+        <img src="../img/logo.png">
+      </a>
+    </div>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+         <ul class="menu">
+      <input type="text" class="search" placeholder="Search..">
+      <a href="indexlogin.html">Beranda</a>
+      <a href="readberita.html">Berita</a>
+      <a href="tips.html">Tips & Trik</a>
+      <div class="dropdown">
+        <button class="dropbtn">Profil
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-content">
+         <a href="profiladmin.html">Profil Saya</a>
+         <a href="../index.html">Logout</a>
+       </div>
+     </div>
+      <div class="dropdown">
+        <button class="dropbtn">Jenis
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-content">
+         <a href="readkursus.html">Kursus</a>
+         <a href="readvideo.html">Video Pembelajaran</a>
+         <a href="readmateri.html">Materi Pembelajaran</a>
+       </div>
+     </div>
+     
+     <label for="chk" class="hide-menu-btn">
+        <i class="fas fa-times"></i>
+      </label>
+   </ul>
+   <hr color=#245770 size="2px" >
+ </div>
+
+  <div class="konten">
+    <div class="ubaha">
+      <a href="createartikel.html"><img src="../img/ubaha.png"></a>
+    </div>
+    
+    <!-- <table class="ubaha">
+    <tr>
+      <td>
+      </td>
+    </tr>
+  </table> -->
+    <table>
+      <tr>
+        <h1>Database Relasional – Konsep, Aplikasi dan Jenisnya </h1>
+        <center><img src="../img/artikel3.png" width="100%"></center>
+
+        <center>written by Irvandi</center>
+
+        <p>Database relasional merupakan jenis Database Management System (DBMS) yang terbaru,  yang memberikan gambaran atau bagam skema yang menjelaskan tentang hubungan antar tabel bisa dilakuan di dalam sebuah database. Model database ini digagas  oleh seorang pakar database bernama EF codd.</p>
+
+
+        <p>Jenis database relasional ini merupakan jenis database yang paling sederhana disamping jenis database pendahulunya yaitu database Hierarki (Hierarchical Database Model), dan database Jaringan (Network Database Model). Jenis database relasional menggunakan strukrur database 2D (dimensi). Perlu diketahui bahwa kedua model pendahulu relasional database yaitu  database hirarki dan database jaringan untuk saat ini sudah tidak banyak digunakan, hal ini karena adanya berbagai kelemahan dan fungsionalitas yang ada dari kedua jenis database tersebut yang sudah memenuhi spesifikasj atau kebutuhan aplikasi modern saat ini, yang menuntut sistem database yang lebih kompleks dan terstruktur untuk memenuhi berbagai kebutuhan komputasi skala besar saat ini, baik dalam skala personal maupun Enterprise.</p>
+
+        <h3>Bagaimana Relasi Database bisa Terhubung ?</h3>
+
+        <p>Untuk membuat sistem basis data yang terpadu kita perlu menghubungkan terlebih dahulu kedua tabel yang ingin Kita dikoneksikan.  Untuk setiap tabel yang ada terdapat field kunci atau primary key, primary key ini dikoneksikan padatabel kedua sehingga di tabel kedua ini menjadi foreign key. Dengan relational database ini Kita cukup mengubungkan kedu tabel yang ada melalui foreign key.</p>
+
+        <h3>Konsep RDBMS</h3>
+        <p>Ilmu yang mempelajari tentang konsep Database Relasional disebut Database Relational System. Database relasional System merupakan konsep yang muncul setelah adanya konsep database pendahulunya yaitu network database dan hierarchycal database. Dalam jenis database relasional ini, ada penggambaran yang jelas tentang hubungan suatu tabel dengan tabel yang lain bisa dilakukan, hubungan ini digambarkan dengan garis solid yang menghubungkan antara satu field name di tabel yang satu, dengan satu fieldname di tabel yang lain. Misalnya fieldname kdpasien di tabel pasien dengan fieldname kdpasien di tabel diagnosapasien, yang saling terhubung karena adanaya kesamaan dalam fungsi dan entitas dari objek yang dimaksud. Dengan demikian, sebuah database relasional ini dirancang untuk memiliki keterkaitan antar tabelnya, menyesuaikan dengan program atau analisa sistem yang dirancang.</p>
+
+        <h3>Aplikasi RDBMS</h3>
+        <p>Untuk diketahui Database adalah sekumpulan tabel yag disimpan dalam bentuk file/elektronik dan dikelompokkan berdasarkan skema yang sudah dibuat oleh user. Untuk melakukan pembuatan struktur, pengisian, pengeditan, dan penghapusan database diperlukan software atau perangkat lunak, dan jenis perangkat lunak  yang dimaksud adalah RDBMS atau disebut Relational Database Management System. Sedangkan command yang diterapkan untuk melakukan berbagai manipulasi terhadap database dan tabel yang ada di software RDBMS disebut SQL (Structured Query Language).</p>
+
+        <p>RDBMS adalah sebuah software komputer yang digunakan untuk membuat, menyunting dan menanajemen basis data yang telah mendukung skema relational. Pemanfaatan program ini sangat banyak sekali contohnya, misalnya dalam sistem apoteker, sistem penyewaan (Rental) mobir, sistem penjualan barang, sistem kepustakaan, sistem pertokoan, dan masih banyak lagi. RDBMS sendiri memiliki tingkatan sesuai skala yang akan digunakan, ada RDBMS yang digunakan untuk small-scale database semisal aplikasi stock sederhana, aplikasi perpustakaan, dan ada aplikasi large-scale database yaitu aplikasi RDBMS dengan skala yang lebih luas mencakup kebutuhan enteprise, contohnya adalah aplikasi Oracle yang digunakan untuk menangani kebutuhan akan manajemen Perusahaan berskala besar (dengan jumlah record yang sangat besar).</p>
+
+        
+        <p>Secara umum ada 3 jenis database relasional yaitu :</p>
+
+
+        <p>1. One to One (1 to 1)</p>
+
+        <p>Relasi database model ini terjadi apalabila sebuah data terdapat pada 2 buah tabel, dan hanya diperbolehkan satu data saja pada masing masing tabel (unique record), sama halnya seperti primary key, record yang ada pada model ini tidak boleh ada yang sama.</p>
+
+        <p>2. One to Many (1 to n)</p>
+
+
+        <p>Relasi database model  ini membolehkan data yang sama pada tabel kedua, tapi hanya membolehkan data yang bersifat unique (unik) pada tabel pertama. Jadi pada model tabel kedua boleh memiliki beberapa data yang sama.</p>
+
+        <p>3. Many to many (n to m)</p>
+        <p>Berbeda dengan kedua model diatas, relasi database model ini membolehkan beberapa data yang sama baik pada tabel pertama maupun tabel kedua. Dengan demikian tidak ada unique record di kedua tabel tersebut.</p>
+
+        <h3>Tujuan model relasional database</h3>
+
+        <p>Menciptakan konsep database DBMS yang terintegrasi dan bersifat standalone
+        Menciptakan DBMS yang konsisten dan menghindari terjadinya data redundancy (duplikasi data) dengan menerapkan konsep normalisasi data, dengan tujuan untuk meningkatkan kemampuan dalam mengambil dan juga memproses data.</p>
+        <h3>Karakteristik Database Relasional</h3>
+
+        <br>Struktur tabel bersifat Tabular
+        <br>Satu bahasa pemrograman atau sintaksis yang ada dapat digunakan untuk semua user
+        <br>Field dikoneksikan melalui value didalam record tabel
+        <h3>Kelebihan Database Relasional</h3>
+
+        <br>Model tampilan / View Tabular  dan Query nya berupa table
+        <br>Tidak adanya variabel pointer
+        <br>Kemampuan operator yang baik
+        <br>User-friendly
+        
+        <h3>Istilah Basis Data</h3>
+        <p>Beberapa istilah data yang umumnya ditemui :</p>
+        <p>1. Entitas</p>
+        <p>Entitas adalah objek yang direkam sebagai data di dalam konsep database sendiri, jadi entity ini merujuk pada object yang hendak dijadikan data yang akan disimpan (bukan nama tabel atau field), sebagai contoh dalam entity perpustakaan yaitu buku, penerbit, pengarang, dsb.</p>
+        <p>2. Field</p>
+        <p>Setiap entity mempunyai field atau kolom yang mewakili isi datanya. Dalam dunia programming ini disebut atribut.</p>
+        <p>3. Record</p>
+        <p>Record adalah kumpulan data yang terdiri dari sekumpan field. Record merupakan satuan informasi database yang berisi satu unit data konkrit.</p>
+        <p>4. Data Value</p>
+        <p>Jika record merupakan satuan data konkrit, maka data value / nilai merupakan satuan data terkecil yang berisi hanya nilai pada field tertentu.</p>
+        <p>Demikianlah ulasan dari artikel Database Relasional. Semoga artikel ini bisa memberi pengetahuan dan wawasan tambahan terhadap para pembaca sekalian akan database relasional ini. Dengan demikian pembaca mampu memiliki gambaran dan wawasan yang cukup untuk mengenal dan membuat rancangan database relasional untuk keperluan dalam pengembangan aplikasi yang akan dirancangnya atau dibuatnya.</p>
+
+      </tr>
+      <br><br>
+      <center>written by Elang Hendy Subrata</center>
+
+    </table>
+  </div>
+</div>
+
+
+
+</body>
+</html>
