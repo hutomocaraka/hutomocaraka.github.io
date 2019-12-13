@@ -1,12 +1,7 @@
-@font-face {
-  font-family: 'GothamBold';
-  /* links to all gotham thin files, font-weight/style declaration */
-}
-
 body{
   margin: 0;
   padding: 0;
-  /*background-image: url(img/bg.png);
+  font-family: Gotham;
   background-size: 1366px 650px;
   background-attachment: fixed;*/
 }
